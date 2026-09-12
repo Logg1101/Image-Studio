@@ -1,0 +1,124 @@
+# ==============================================================================
+# ImageStudio Git Ignore
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# 1. Environments & Virtual Envs
+# ------------------------------------------------------------------------------
+venv/
+env/
+.venv/
+ENV/
+env.bak/
+venv.bak/
+
+# ------------------------------------------------------------------------------
+# 2. Sensitive Config & Secrets
+# ------------------------------------------------------------------------------
+.env
+.env.local
+.env.*.local
+*.env
+duck_pixiv/data/settings.json
+
+# ------------------------------------------------------------------------------
+# 3. Python Bytecode & Runtime Caches
+# ------------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*.class
+*.pyo
+*.pyd
+.pytest_cache/
+.coverage
+htmlcov/
+.ruff_cache/
+ruff_report.json
+
+# ------------------------------------------------------------------------------
+# 4. Node.js & Frontend Build Artifacts
+# ------------------------------------------------------------------------------
+node_modules/
+**/node_modules/
+dist/
+**/dist/
+build/
+**/build/
+.vite/
+*.tsbuildinfo
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ------------------------------------------------------------------------------
+# 5. Tauri Desktop Native Builds
+# ------------------------------------------------------------------------------
+src-tauri/target/
+**/src-tauri/target/
+
+# ------------------------------------------------------------------------------
+# 6. AI Weights, Checkpoints & Large Models (Never commit gigabytes of weights!)
+# ------------------------------------------------------------------------------
+*.safetensors
+*.gguf
+*.bin
+*.pt
+*.pth
+*.ckpt
+*.onnx
+
+# Model caches and Hugging Face staging
+**/.cache/
+**/.hf_cache/
+.cache/
+.hf_cache/
+
+# Ignore custom downloaded checkpoint subfolders and backups
+models/loras/backups/
+models/checkpoints/Ilustrious*
+models/checkpoints/Pony*
+
+# ------------------------------------------------------------------------------
+# 7. Local Generation Outputs & User Data
+# ------------------------------------------------------------------------------
+outputs/images/*
+!outputs/images/.gitkeep
+outputs/metadata/*
+!outputs/metadata/.gitkeep
+outputs/retouch_test/
+outputs/Projects/
+outputs/202*
+outputs/usage_stats.json
+Enhanced/
+Shorts images/
+
+# ------------------------------------------------------------------------------
+# 8. Databases & Logs
+# ------------------------------------------------------------------------------
+*.db
+*.sqlite
+*.sqlite3
+history/*.db
+!history/.gitkeep
+duck_pixiv/database/*.db
+
+*.log
+scratch/
+tmp_chrome/
+.serena/
+
+# ------------------------------------------------------------------------------
+# 9. IDE & OS Artifacts
+# ------------------------------------------------------------------------------
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+*.sublime-project
+*.sublime-workspace
+
+# ------------------------------------------------------------------------------
+# 10. Preserve Directory Scaffolding
+# ------------------------------------------------------------------------------
+!**/.gitkeep

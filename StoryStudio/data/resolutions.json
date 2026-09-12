@@ -1,0 +1,106 @@
+[
+  {
+    "id": "1024x1536",
+    "name": "Portrait 2:3 (Hassaku Preferred)",
+    "width": 1024,
+    "height": 1536,
+    "aspect_ratio": "2:3",
+    "is_default": true
+  },
+  {
+    "id": "896x1152",
+    "name": "Portrait 3:4 (Tall)",
+    "width": 896,
+    "height": 1152,
+    "aspect_ratio": "3:4",
+    "is_default": false
+  },
+  {
+    "id": "832x1216",
+    "name": "Portrait SDXL Standard",
+    "width": 832,
+    "height": 1216,
+    "aspect_ratio": "1:1.46",
+    "is_default": false
+  },
+  {
+    "id": "768x1344",
+    "name": "Social / Mobile 9:16",
+    "width": 768,
+    "height": 1344,
+    "aspect_ratio": "9:16",
+    "is_default": false
+  },
+  {
+    "id": "1024x1280",
+    "name": "Instagram Portrait 4:5",
+    "width": 1024,
+    "height": 1280,
+    "aspect_ratio": "4:5",
+    "is_default": false
+  },
+  {
+    "id": "640x1536",
+    "name": "Ultra-Tall Vertical 9:21",
+    "width": 640,
+    "height": 1536,
+    "aspect_ratio": "9:21",
+    "is_default": false
+  },
+  {
+    "id": "1024x1024",
+    "name": "Square 1:1",
+    "width": 1024,
+    "height": 1024,
+    "aspect_ratio": "1:1",
+    "is_default": false
+  },
+  {
+    "id": "1536x1024",
+    "name": "Landscape 3:2 (Cinematic)",
+    "width": 1536,
+    "height": 1024,
+    "aspect_ratio": "3:2",
+    "is_default": false
+  },
+  {
+    "id": "1152x896",
+    "name": "Landscape 4:3 (Wide)",
+    "width": 1152,
+    "height": 896,
+    "aspect_ratio": "4:3",
+    "is_default": false
+  },
+  {
+    "id": "1216x832",
+    "name": "Landscape SDXL Standard",
+    "width": 1216,
+    "height": 832,
+    "aspect_ratio": "1.46:1",
+    "is_default": false
+  },
+  {
+    "id": "1344x768",
+    "name": "Widescreen 16:9",
+    "width": 1344,
+    "height": 768,
+    "aspect_ratio": "16:9",
+    "is_default": false
+  },
+  {
+    "id": "1536x640",
+    "name": "Ultra-Wide Cinema 21:9",
+    "width": 1536,
+    "height": 640,
+    "aspect_ratio": "21:9",
+    "is_default": false
+  },
+  {
+    "id": "1280x1024",
+    "name": "Landscape 5:4",
+    "width": 1280,
+    "height": 1024,
+    "aspect_ratio": "5:4",
+    "is_default": false
+  }
+]

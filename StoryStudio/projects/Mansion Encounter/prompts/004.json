@@ -1,0 +1,14 @@
+{
+  "line_index": 3,
+  "line_text": "New story progression line...",
+  "character": "Belfast_HassakuXIllustrious_V1",
+  "directive": {},
+  "positive_prompt": "Belfast, long white hair draped over her shoulders like a veil, blue eyes wide with panic, large breasts swaying under a delicate lace bra, hourglass figure taut and exposed, hands bound above head in gleaming spiderweb strands, mouth sealed shut with thick webbing, thigh-high stockings, garter straps, long white gloves, glistening lace lingerie, candlelit Gothic room, shadows stretching across floor, dramatic pose, webbed expression of terror and beauty, ultra-detailed textures, high realism, cinematic lighting, 8K, sensual tension, ethereal glow on skin",
+  "negative_prompt": "worst quality, low quality, bad anatomy, bad hands, missing fingers, extra fingers, fused fingers, distorted limbs, mutated hands, blurry, watermark, signature, text, cropped, out of frame, deformed, duplicate, morbid, bad proportions, disfigured",
+  "resolution": "1024x1536",
+  "steps": 40,
+  "cfg": 7,
+  "sampler": "DPM++ 2M",
+  "scheduler": "Karras",
+  "seed": 1458659526
+}

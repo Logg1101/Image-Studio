@@ -1,0 +1,139 @@
+{
+  "source_images": [
+    "D:\\AI\\imageStudio\\outputs\\Tests\\images\\sdxl_output_1524645349.png",
+    "D:\\AI\\imageStudio\\outputs\\Tests\\images\\sdxl_output_4292593842.png",
+    "D:\\AI\\imageStudio\\outputs\\Tests\\images\\sdxl_output_3515495566.png",
+    "D:\\AI\\imageStudio\\outputs\\Tests\\images\\sdxl_output_147833449.png",
+    "D:\\AI\\imageStudio\\outputs\\Tests\\images\\sdxl_output_4221275172.png",
+    "D:\\AI\\imageStudio\\outputs\\Tests\\images\\sdxl_output_1524645344.png",
+    "D:\\AI\\imageStudio\\outputs\\Tests\\images\\sdxl_output_2149769976.png",
+    "D:\\AI\\imageStudio\\outputs\\Tests\\images\\sdxl_output_3802024077.png",
+    "D:\\AI\\imageStudio\\outputs\\Tests\\images\\sdxl_output_756804417.png",
+    "D:\\AI\\imageStudio\\outputs\\Tests\\images\\sdxl_output_1305728566.png"
+  ],
+  "extracted_metadata": {
+    "image_path": "D:\\AI\\imageStudio\\outputs\\Tests\\images\\sdxl_output_1524645349.png",
+    "filename": "sdxl_output_1524645349.png",
+    "model": "hassakuXLIllustrious_v22",
+    "architecture": "sdxl",
+    "prompt": "1girl, masterpiece, highly detailed, Taihou, Azur Lane, black long hair, red eyes, large breasts, maid headdress, chain  choker, lavender lace bra, matching panties, garter belts, black lace thigh high stockings, long lace gloves, embarrassed, shy expression,  fashion model pose, fashion photography, elegant, cinematic",
+    "negative_prompt": "blurry, low quality, distorted, bad anatomy, artifacts",
+    "seed": 1524645349,
+    "steps": 40,
+    "width": 768,
+    "height": 1344,
+    "raw_info": {
+      "model": "hassakuXLIllustrious_v22",
+      "architecture": "sdxl",
+      "variant": "base",
+      "prompt": "1girl, masterpiece, highly detailed, Taihou, Azur Lane, black long hair, red eyes, large breasts, maid headdress, chain  choker, lavender lace bra, matching panties, garter belts, black lace thigh high stockings, long lace gloves, embarrassed, shy expression,  fashion model pose, fashion photography, elegant, cinematic",
+      "negative_prompt": "blurry, low quality, distorted, bad anatomy, artifacts",
+      "seed": 1524645349,
+      "steps": 40,
+      "guidance_scale": 7,
+      "width": 768,
+      "height": 1344,
+      "generation_time_ms": 99717.95773506165,
+      "vram_peak_gb": 5.366306781768799,
+      "sampler": "Euler a",
+      "scheduler": "Normal",
+      "loras": {
+        "D:\\AI\\imageStudio\\models\\loras\\characters\\Taihou_HassakuXIllustrious_V1.safetensors": 1
+      },
+      "upscale_method": "None",
+      "upscale_factor": 2
+    },
+    "character_detected": "Taihou",
+    "features": {
+      "character": [
+        "Taihou"
+      ],
+      "clothing": [
+        "maid headdress",
+        "lavender lace bra",
+        "matching panties",
+        "garter belts",
+        "black lace thigh high stockings",
+        "long lace gloves"
+      ],
+      "appearance": [
+        "black long hair",
+        "red eyes",
+        "large breasts"
+      ],
+      "pose": [],
+      "expression": [
+        "red eyes",
+        "embarrassed"
+      ],
+      "materials": [
+        "chain  choker",
+        "lavender lace bra",
+        "black lace thigh high stockings",
+        "long lace gloves"
+      ],
+      "environment": [],
+      "general_tags": [
+        "Azur Lane",
+        "shy expression",
+        "fashion model pose",
+        "fashion photography",
+        "elegant",
+        "cinematic"
+      ]
+    }
+  },
+  "title_candidates": [
+    {
+      "ja": "大鳳、夜の装い",
+      "en": "Taihou, Night Attire"
+    },
+    {
+      "ja": "夜色に染まる大鳳",
+      "en": "Taihou Shaded by the Night"
+    },
+    {
+      "ja": "大鳳の優雅なひととき",
+      "en": "Taihou's Elegant Moment"
+    },
+    {
+      "ja": "月明かりと大鳳",
+      "en": "Moonlight and Taihou"
+    },
+    {
+      "ja": "素肌を包むレースの大鳳",
+      "en": "Lace Embracing Taihou's Skin"
+    }
+  ],
+  "selected_title": "大鳳、夜の装い",
+  "description": "そのアヒルは考えていた……もし大鳳がメイドだったらどんな感じだろうか、と。そこでアヒルは、彼女がメイド姿であるところを想像してみた。\n\n「グーナー（gooner）」向けのコンテンツをもっと見たい方は、ぜひフォローしてください。",
+  "generated_tags": [
+    "大鳳(アズールレーン)",
+    "アズールレーン",
+    "女の子",
+    "ロングヘア",
+    "赤い瞳",
+    "巨乳",
+    "メイドカチューシャ",
+    "レース",
+    "ストッキング",
+    "手袋"
+  ],
+  "final_edited_tags": [
+    "大鳳(アズールレーン)",
+    "アズールレーン",
+    "女の子",
+    "ロングヘア",
+    "赤い瞳",
+    "巨乳",
+    "メイドカチューシャ",
+    "レース",
+    "ストッキング",
+    "手袋"
+  ],
+  "is_ai": true,
+  "age_limit": "r18",
+  "posting_status": "success",
+  "pixiv_work_id": "1788406469",
+  "saved_at": "2026-09-03 09:04:29"
+}

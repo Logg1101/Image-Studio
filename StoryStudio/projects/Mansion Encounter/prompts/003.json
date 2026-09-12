@@ -1,0 +1,14 @@
+{
+  "line_index": 2,
+  "line_text": "New story progression line...",
+  "character": "Belfast_HassakuXIllustrious_V1",
+  "directive": {},
+  "positive_prompt": "Belfast, long white hair cascading over bare shoulders, blue eyes wide with fear and vulnerability, large breasts exposed under a partially torn black silk gown, hourglass figure glistening under dim candlelight, hands gripping the edge of the room, mysterious pale hands peeling fabric off her body, lace and satin textures unraveling, Persian rug beneath her feet, Gothic chandelier above, shadowy figure in background, high detail on skin, realistic lighting, ultra-realistic anatomy, dramatic emotional pose, 8K, sensual yet tense atmosphere",
+  "negative_prompt": "worst quality, low quality, bad anatomy, bad hands, missing fingers, extra fingers, fused fingers, distorted limbs, mutated hands, blurry, watermark, signature, text, cropped, out of frame, deformed, duplicate, morbid, bad proportions, disfigured",
+  "resolution": "1024x1536",
+  "steps": 40,
+  "cfg": 7,
+  "sampler": "DPM++ 2M",
+  "scheduler": "Karras",
+  "seed": 680138259
+}

@@ -1,0 +1,52 @@
+[
+  {
+    "id": "front_view",
+    "name": "Front View",
+    "prompt": "front view, centered portrait, direct eye contact"
+  },
+  {
+    "id": "back_view",
+    "name": "Back View",
+    "prompt": "back view, from behind, delicate back profile"
+  },
+  {
+    "id": "side_view",
+    "name": "Side View",
+    "prompt": "profile view, side angle, dramatic silhouette"
+  },
+  {
+    "id": "three_quarter_front",
+    "name": "3/4 Front View",
+    "prompt": "three-quarter front view, dynamic portrait angle"
+  },
+  {
+    "id": "three_quarter_back",
+    "name": "3/4 Back View",
+    "prompt": "three-quarter back view, partial profile from behind"
+  },
+  {
+    "id": "from_above",
+    "name": "From Above",
+    "prompt": "high angle shot, looking down from above, top-down perspective"
+  },
+  {
+    "id": "from_below",
+    "name": "From Below",
+    "prompt": "low angle shot, looking up from below, majestic upward perspective"
+  },
+  {
+    "id": "over_the_shoulder",
+    "name": "Over the Shoulder",
+    "prompt": "over the shoulder shot, cinematic framing, first-person perspective"
+  },
+  {
+    "id": "close_up",
+    "name": "Close-up",
+    "prompt": "close-up portrait, detailed facial features, expressive eyes, intimate focus"
+  },
+  {
+    "id": "full_body",
+    "name": "Full Body",
+    "prompt": "full body shot, complete head-to-toe view, wide perspective"
+  }
+]

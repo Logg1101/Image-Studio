@@ -1,0 +1,122 @@
+[
+  {
+    "id": "lace",
+    "name": "Lace Trim",
+    "prompt": "delicate lace trim, intricate lace pattern"
+  },
+  {
+    "id": "ribbons",
+    "name": "Silk Ribbons",
+    "prompt": "silk ribbons, decorative ribbon ties"
+  },
+  {
+    "id": "long_gloves",
+    "name": "Opera Gloves",
+    "prompt": "opera gloves, elbow-length gloves"
+  },
+  {
+    "id": "stockings",
+    "name": "Thighhighs / Stockings",
+    "prompt": "thighhighs, black stockings, sheer thigh-high socks"
+  },
+  {
+    "id": "choker",
+    "name": "Velvet Choker",
+    "prompt": "velvet choker with charm, neck ribbon"
+  },
+  {
+    "id": "frills",
+    "name": "Layered Frills",
+    "prompt": "layered frills, ruffled hem, ornate ruffled edges"
+  },
+  {
+    "id": "embroidery",
+    "name": "Golden Embroidery",
+    "prompt": "golden embroidered filigree, intricate embroidery"
+  },
+  {
+    "id": "bows",
+    "name": "Dainty Bows",
+    "prompt": "dainty silk bows, waist bow, hair bows"
+  },
+  {
+    "id": "satin",
+    "name": "Lustrous Satin",
+    "prompt": "lustrous satin texture, glossy fabric finish"
+  },
+  {
+    "id": "floral_pattern",
+    "name": "Floral Pattern",
+    "prompt": "subtle floral print, embroidered blossoms"
+  },
+  {
+    "id": "garter_belt",
+    "name": "Garter Belt",
+    "prompt": "lace garter belt, garter straps, sensual lingerie detail"
+  },
+  {
+    "id": "fishnets",
+    "name": "Fishnet Stockings",
+    "prompt": "fishnet stockings, diamond pattern tights, fishnets"
+  },
+  {
+    "id": "bell_collar",
+    "name": "Bell Collar",
+    "prompt": "collar with small golden bell, ribbon collar"
+  },
+  {
+    "id": "pearl_necklace",
+    "name": "Pearl Necklace",
+    "prompt": "elegant pearl necklace, lustrous white pearls"
+  },
+  {
+    "id": "wrist_cuffs",
+    "name": "Wrist Cuffs / Shackles",
+    "prompt": "frilled wrist cuffs, ornamental leather wrist cuffs"
+  },
+  {
+    "id": "hair_ribbon",
+    "name": "Hair Ribbon / Headband",
+    "prompt": "hair ribbon, silk headband with bow, hair ornament"
+  },
+  {
+    "id": "thigh_strap",
+    "name": "Thigh Strap / Holster",
+    "prompt": "leather thigh strap, tactical leg band, thigh ring"
+  },
+  {
+    "id": "glasses",
+    "name": "Glasses / Spectacles",
+    "prompt": "stylish glasses, thin wireframe spectacles, Meganekko"
+  },
+  {
+    "id": "capelet",
+    "name": "Capelet / Cloak",
+    "prompt": "shoulder capelet, velvet short cloak, gold clasp"
+  },
+  {
+    "id": "corset_lacing",
+    "name": "Corset Lacing",
+    "prompt": "tight corset lacing, criss-cross back laces"
+  },
+  {
+    "id": "arm_warmers",
+    "name": "Arm Warmers",
+    "prompt": "knit arm warmers, fingerless sleeve warmers"
+  },
+  {
+    "id": "kanzashi",
+    "name": "Kanzashi Hairpin",
+    "prompt": "traditional japanese kanzashi hairpin, dangling floral hair ornament"
+  },
+  {
+    "id": "ankle_bracelet",
+    "name": "Ankle Bracelet",
+    "prompt": "dainty gold ankle bracelet, anklet with bell charm"
+  },
+  {
+    "id": "ear_piercings",
+    "name": "Ear Piercings / Earrings",
+    "prompt": "dangling gem earrings, silver hoop piercings"
+  }
+]

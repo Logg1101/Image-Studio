@@ -1,0 +1,11 @@
+{
+  "enabled": true,
+  "provider": "openai_compatible",
+  "base_url": "http://127.0.0.1:11434/v1",
+  "api_key": "",
+  "model": "joycaption",
+  "temperature": 0.5,
+  "max_tokens": 512,
+  "timeout": 60,
+  "default_profile": "joycaption"
+}

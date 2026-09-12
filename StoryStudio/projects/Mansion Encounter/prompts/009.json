@@ -1,0 +1,35 @@
+{
+  "line_index": 8,
+  "line_text": "Belfast\u2019s soul remained untamed, even as her body bowed.",
+  "character": "Akeno_HassakuXIllustrious_V1",
+  "directive": {
+    "character": "Akeno_HassakuXIllustrious_V1",
+    "character_name": "Akeno Himejima",
+    "character_trigger": "akeno himejima, long black ponytail, violet eyes, gentle smile",
+    "character_description": "Tall elegant woman with long black ponytail, violet eyes, graceful presence, and a gentle playful demeanor",
+    "action": "performing: Belfast\u2019s soul remained untamed, even as her body bowed.",
+    "emotion": "gentle and curious",
+    "location": "luxurious room",
+    "clothes_type": "maid",
+    "clothes_color": "red",
+    "clothes_details": [
+      "lace",
+      "ribbons"
+    ],
+    "pose": "standing gracefully",
+    "pov": "three_quarter_front",
+    "scene": "luxurious room, gentle and curious, standing gracefully",
+    "scene_description": "Belfast\u2019s soul remained untamed, even as her body bowed.",
+    "style": "romantic_anime",
+    "continuity_summary": "Line 9: In luxurious room, wearing red maid. Mood: gentle and curious.",
+    "story_line_text": "Belfast\u2019s soul remained untamed, even as her body bowed."
+  },
+  "positive_prompt": "masterpiece, best quality, ultra-detailed, 1girl, akeno himejima, long black ponytail, violet eyes, gentle smile, red maid, lace, ribbons, standing gracefully, three_quarter_front, Belfast\u2019s soul remained untamed, even as her body bowed., romantic_anime",
+  "negative_prompt": "worst quality, low quality, bad anatomy, bad hands, missing fingers, extra fingers, fused fingers, distorted limbs, mutated hands, blurry, watermark, signature, text, cropped, out of frame, deformed, duplicate, morbid, bad proportions, disfigured",
+  "resolution": "1024x1536",
+  "steps": 30,
+  "cfg": 5.5,
+  "sampler": "Euler a",
+  "scheduler": "Normal",
+  "seed": 1297160540
+}

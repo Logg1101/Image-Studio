@@ -1,0 +1,35 @@
+{
+  "line_index": 7,
+  "line_text": "her climax a surrender, not a surrender.",
+  "character": "Akeno_HassakuXIllustrious_V1",
+  "directive": {
+    "character": "Akeno_HassakuXIllustrious_V1",
+    "character_name": "Akeno Himejima",
+    "character_trigger": "akeno himejima, long black ponytail, violet eyes, gentle smile",
+    "character_description": "Tall elegant woman with long black ponytail, violet eyes, graceful presence, and a gentle playful demeanor",
+    "action": "performing: her climax a surrender, not a surrender.",
+    "emotion": "gentle and curious",
+    "location": "luxurious room",
+    "clothes_type": "maid",
+    "clothes_color": "red",
+    "clothes_details": [
+      "lace",
+      "ribbons"
+    ],
+    "pose": "standing gracefully",
+    "pov": "three_quarter_front",
+    "scene": "luxurious room, gentle and curious, standing gracefully",
+    "scene_description": "her climax a surrender, not a surrender.",
+    "style": "romantic_anime",
+    "continuity_summary": "Line 8: In luxurious room, wearing red maid. Mood: gentle and curious.",
+    "story_line_text": "her climax a surrender, not a surrender."
+  },
+  "positive_prompt": "masterpiece, best quality, ultra-detailed, 1girl, akeno himejima, long black ponytail, violet eyes, gentle smile, red maid, lace, ribbons, standing gracefully, three_quarter_front, her climax a surrender, not a surrender., romantic_anime",
+  "negative_prompt": "worst quality, low quality, bad anatomy, bad hands, missing fingers, extra fingers, fused fingers, distorted limbs, mutated hands, blurry, watermark, signature, text, cropped, out of frame, deformed, duplicate, morbid, bad proportions, disfigured",
+  "resolution": "1024x1536",
+  "steps": 30,
+  "cfg": 5.5,
+  "sampler": "Euler a",
+  "scheduler": "Normal",
+  "seed": 1765583128
+}

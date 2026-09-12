@@ -1,0 +1,14 @@
+{
+  "line_index": 1,
+  "line_text": "New story progression line...",
+  "character": "Belfast_HassakuXIllustrious_V1",
+  "directive": {},
+  "positive_prompt": "Belfast, long white hair tangled in a glistening spiderweb, blue eyes wide with shock and wonder, large breasts visible through a torn black silk gown, hourglass figure entangled mid-motion, spiderweb strands catching her waist, shoulders, hair, glistening under candlelight, dramatic tension, detailed lace and silk textures, velvet curtains in background, Gothic mansion interior, mysterious shadows, hyper-realistic skin, high detail on spiderweb reflections, cinematic composition, 8K, emotional expression of fear and awe",
+  "negative_prompt": "worst quality, low quality, bad anatomy, bad hands, missing fingers, extra fingers, fused fingers, distorted limbs, mutated hands, blurry, watermark, signature, text, cropped, out of frame, deformed, duplicate, morbid, bad proportions, disfigured",
+  "resolution": "1024x1536",
+  "steps": 40,
+  "cfg": 7,
+  "sampler": "DPM++ 2M",
+  "scheduler": "Karras",
+  "seed": 462745259
+}

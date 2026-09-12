@@ -1,0 +1,47 @@
+[
+  {
+    "id": "none",
+    "name": "Standard (Default)",
+    "prompt": ""
+  },
+  {
+    "id": "natural_hemp_rope",
+    "name": "Natural Hemp Shibari Rope",
+    "prompt": "traditional natural jute hemp rope, textured rope fibers, japanese kinbaku rope"
+  },
+  {
+    "id": "red_silk_rope",
+    "name": "Crimson Silk Rope",
+    "prompt": "vibrant crimson red silk rope, smooth lustrous twisted cord, elegant shibari binding"
+  },
+  {
+    "id": "black_leather_straps",
+    "name": "Heavy Black Leather and Buckles",
+    "prompt": "heavy black leather bondage straps, polished chrome metal buckles, reinforced riveted leather"
+  },
+  {
+    "id": "steel_chains",
+    "name": "Steel Chains and Padlocks",
+    "prompt": "heavy metallic steel chains, solid iron links, hanging padlocks, cold metal restraints"
+  },
+  {
+    "id": "glossy_latex",
+    "name": "Glossy Latex and Rubber Straps",
+    "prompt": "shiny black latex straps, glossy wet-look rubber restraints, high-specular reflective material"
+  },
+  {
+    "id": "satin_ribbon_ties",
+    "name": "Soft Satin Ribbon Ties",
+    "prompt": "wide double-sided satin ribbon ties, decorative soft bow knots, gentle luxurious fabric binding"
+  },
+  {
+    "id": "clear_vinyl",
+    "name": "Clear Vinyl and Cling Wrap",
+    "prompt": "transparent clear vinyl wraps, tight plastic cling wrap binding, high-gloss sheer material"
+  },
+  {
+    "id": "velvet_padded",
+    "name": "Velvet Padded Luxury Straps",
+    "prompt": "plush royal purple velvet padded cuffs, soft cushioned leather backing, luxury bondage trim"
+  }
+]

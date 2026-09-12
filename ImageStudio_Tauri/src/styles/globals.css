@@ -1,0 +1,82 @@
+﻿@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-main: #090C12;
+    --bg-panel: #0F131B;
+    --bg-card: #151A24;
+    --bg-hover: #1D2433;
+    --border-main: #252C3A;
+    --border-hover: #353F54;
+    --border-focus: #7C6CFF;
+    --primary: #7C6CFF;
+    --secondary: #4F9CFF;
+    --accent: #35D6C5;
+    --amber: #F59E0B;
+    --danger: #FF5C6C;
+    --success: #10B981;
+    --text-primary: #E8ECF4;
+    --text-muted: #8993A7;
+  }
+
+  body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+}
+
+/* Custom minimal scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #252C3A;
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #353F54;
+}
+
+/* Restrained gradients and button styles */
+.btn-primary-gradient {
+  background: linear-gradient(135deg, #7C6CFF 0%, #4F9CFF 100%);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-primary-gradient:hover:not(:disabled) {
+  background: linear-gradient(135deg, #8E80FF 0%, #68B0FF 100%);
+  box-shadow: 0 4px 16px rgba(124, 108, 255, 0.25);
+}
+
+.btn-primary-gradient:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.btn-danger-action {
+  background-color: #1D1115;
+  border: 1px solid #3F1D24;
+  color: #FF5C6C;
+  transition: all 0.2s ease;
+}
+
+.btn-danger-action:hover:not(:disabled) {
+  background-color: #2F171D;
+  border-color: #FF5C6C;
+  color: #FFFFFF;
+}
+
+/* Focus styles */
+input:focus, textarea:focus, select:focus, button:focus-visible {
+  outline: none;
+  border-color: #7C6CFF;
+}

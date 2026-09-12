@@ -1,0 +1,62 @@
+[
+  {
+    "id": "standing",
+    "name": "Standing",
+    "prompt": "standing gracefully, elegant posture, natural stance"
+  },
+  {
+    "id": "sitting",
+    "name": "Sitting",
+    "prompt": "sitting gracefully on chair, elegant relaxed poise"
+  },
+  {
+    "id": "kneeling",
+    "name": "Kneeling",
+    "prompt": "kneeling on floor, seiza pose, demure posture"
+  },
+  {
+    "id": "walking",
+    "name": "Walking",
+    "prompt": "walking forward gently, flowing movement, graceful stride"
+  },
+  {
+    "id": "looking_over_shoulder",
+    "name": "Looking Over Shoulder",
+    "prompt": "looking back over her shoulder, seductive glance back, arched back"
+  },
+  {
+    "id": "hands_behind_back",
+    "name": "Hands Behind Back",
+    "prompt": "hands held behind back, playful demure stance, chest forward"
+  },
+  {
+    "id": "holding_hands_together",
+    "name": "Holding Hands Together",
+    "prompt": "holding hands together in front of chest, bashful finger clasp, shy gesture"
+  },
+  {
+    "id": "sitting_on_bed",
+    "name": "Sitting on Bed",
+    "prompt": "sitting on soft bed, legs crossed gently, soft bedding around"
+  },
+  {
+    "id": "tied_up_bondage_shibari",
+    "name": "Tied up / Bondage / Shibari",
+    "prompt": "bound with ornate shibari ropes, tied up posture, intricate hemp rope binding"
+  },
+  {
+    "id": "leaning_against_wall",
+    "name": "Leaning Against Wall",
+    "prompt": "leaning back against wall, relaxed tilt, one leg bent"
+  },
+  {
+    "id": "lying_down",
+    "name": "Lying Down",
+    "prompt": "lying down, relaxed pose, comfortable posture"
+  },
+  {
+    "id": "stretching",
+    "name": "Stretching",
+    "prompt": "stretching arms up, relaxed morning stretch"
+  }
+]

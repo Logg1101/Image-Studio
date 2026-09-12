@@ -1,0 +1,33 @@
+{
+  "Belfast": {
+    "jp_name": "ベルファスト",
+    "series": "アズールレーン",
+    "default_tags": [
+      "ベルファスト(アズールレーン)",
+      "アズールレーン"
+    ]
+  },
+  "Taihou": {
+    "jp_name": "大鳳",
+    "series": "アズールレーン",
+    "default_tags": [
+      "大鳳(アズールレーン)",
+      "アズールレーン"
+    ]
+  },
+  "Akeno": {
+    "jp_name": "姫島朱乃",
+    "series": "ハイスクールD×D",
+    "default_tags": [
+      "姫島朱乃",
+      "ハイスクールD×D"
+    ]
+  },
+  "Velina": {
+    "jp_name": "ヴェリーナ",
+    "series": "オリジナル",
+    "default_tags": [
+      "オリジナル"
+    ]
+  }
+}

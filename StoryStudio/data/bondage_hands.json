@@ -1,0 +1,52 @@
+[
+  {
+    "id": "none",
+    "name": "Default / Unspecified",
+    "prompt": ""
+  },
+  {
+    "id": "behind_back_wrists",
+    "name": "Hands Bound Behind Back",
+    "prompt": "hands tied behind back, wrists bound together tightly with ropes, restricted arms"
+  },
+  {
+    "id": "box_tie_elbows",
+    "name": "Elbows Locked (Box Tie)",
+    "prompt": "box tie arm binding, elbows pulled tightly together behind back, chest pushed forward, immobilized upper arms"
+  },
+  {
+    "id": "overhead_suspended",
+    "name": "Wrists Bound Overhead",
+    "prompt": "wrists bound together overhead to ceiling anchor, arms stretched upward tautly, arched posture"
+  },
+  {
+    "id": "front_bound",
+    "name": "Hands Bound in Front",
+    "prompt": "hands tied together in front at wrists, tight rope cuffs, defensive restrained posture"
+  },
+  {
+    "id": "crossed_over_chest",
+    "name": "Arms Crossed Over Chest",
+    "prompt": "arms folded tight across chest and bound with ropes, straightjacket style torso binding"
+  },
+  {
+    "id": "leather_armbinder",
+    "name": "Leather Armbinder Monoglove",
+    "prompt": "heavy black leather armbinder sleeve, arms locked tight behind back, buckled straps and D-rings"
+  },
+  {
+    "id": "side_spread_shackles",
+    "name": "Arms Spread to Wall Shackles",
+    "prompt": "arms spread wide to left and right, wrists locked in iron wall shackles, taut iron chains"
+  },
+  {
+    "id": "praying_hands_tie",
+    "name": "Praying Hands Palms Bound",
+    "prompt": "palms pressed together in prayer position, fingers interlocked and wrists bound firmly, submissive pose"
+  },
+  {
+    "id": "strappado_high_tie",
+    "name": "Strappado High Arm Lift",
+    "prompt": "strappado binding, wrists tied behind back and pulled high towards shoulder blades, arched spine"
+  }
+]

@@ -1,0 +1,82 @@
+[
+  {
+    "id": "neutral",
+    "name": "Neutral / Serene",
+    "prompt": "calm expression, serene face, gentle gaze, neutral expression"
+  },
+  {
+    "id": "sweet_smile",
+    "name": "Sweet Smile",
+    "prompt": "sweet gentle smile, happy expression, bright sparkling eyes, slight blush"
+  },
+  {
+    "id": "shy_blush",
+    "name": "Shy Blush",
+    "prompt": "blushing heavily, shy expression, embarrassed gaze, looking down, fidgety"
+  },
+  {
+    "id": "seductive",
+    "name": "Seductive Glance",
+    "prompt": "seductive expression, sultry half-closed eyes, bedroom eyes, biting lower lip"
+  },
+  {
+    "id": "pout_tsundere",
+    "name": "Pout / Tsundere",
+    "prompt": "cute pout, puffed cheeks, tsundere expression, averted gaze, slight frown"
+  },
+  {
+    "id": "wink_playful",
+    "name": "Wink & Playful",
+    "prompt": "playful wink, one eye closed, sticking out tongue playfully, cheeky grin"
+  },
+  {
+    "id": "ahegao_ecstatic",
+    "name": "Ahegao / Ecstatic",
+    "prompt": "ahegao, rolled eyes, tongue out, drooling, intense blush, ecstatic pleasure"
+  },
+  {
+    "id": "smug",
+    "name": "Smug Grin",
+    "prompt": "smug expression, confident grin, teasing look, one eyebrow raised"
+  },
+  {
+    "id": "crying_tearful",
+    "name": "Tearful / Crying",
+    "prompt": "crying, tears in eyes, trembling lips, emotional sad expression, watery eyes"
+  },
+  {
+    "id": "shocked_open_mouth",
+    "name": "Shocked / Open Mouth",
+    "prompt": "gasping, surprised expression, wide open eyes, parting lips in shock"
+  },
+  {
+    "id": "hypnotized_blank",
+    "name": "Hypnotized / Blank Stare",
+    "prompt": "hypnotized eyes, blank stare, dilated pupils, empty mind, dazed expression"
+  },
+  {
+    "id": "panicked_flustered",
+    "name": "Panicked / Flustered",
+    "prompt": "panicked expression, sweat drop, wide frantic eyes, flustered blush, nervous"
+  },
+  {
+    "id": "sleepy_drowsy",
+    "name": "Sleepy / Drowsy",
+    "prompt": "sleepy expression, drowsy half-open eyes, yawning gently, relaxed face"
+  },
+  {
+    "id": "biting_lip",
+    "name": "Biting Lip",
+    "prompt": "biting lip, nervous excited expression, flushed cheeks, intense eye contact"
+  },
+  {
+    "id": "yandere_crazy",
+    "name": "Dark Yandere",
+    "prompt": "yandere expression, glowing unhinged eyes, manic smile, intense crazy stare"
+  },
+  {
+    "id": "determined",
+    "name": "Determined / Confident",
+    "prompt": "determined gaze, confident expression, sharp focused eyes, fearless"
+  }
+]

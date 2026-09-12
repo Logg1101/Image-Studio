@@ -1,0 +1,126 @@
+{
+  "source_images": [
+    "D:\\AI\\imageStudio\\outputs\\2026-08-27\\Belfast\\Belfast_20260827_221641_476836733.png"
+  ],
+  "extracted_metadata": {
+    "image_path": "D:\\AI\\imageStudio\\outputs\\2026-08-27\\Belfast\\Belfast_20260827_221641_476836733.png",
+    "filename": "Belfast_20260827_221641_476836733.png",
+    "model": "Illustrious-XL-v1.0",
+    "architecture": "",
+    "prompt": "1girl, masterpiece, highly detailed, Belfast, Azur Lane, white long hair, blue eyes, maid headdress, chain choker, maid uniform, garter belts, black lace thigh high stockings, long lace gloves, embarrassed, shy expression, fashion model pose, fashion photography, elegant, cinematic",
+    "negative_prompt": "blurry, low quality, distorted, bad anatomy, deformed, artifacts, ugly",
+    "seed": 476836733,
+    "steps": null,
+    "width": 1536,
+    "height": 2688,
+    "raw_info": {
+      "model": "Illustrious-XL-v1.0",
+      "architecture": "sdxl",
+      "prompt": "1girl, masterpiece, highly detailed, Belfast, Azur Lane, white long hair, blue eyes, maid headdress, chain choker, maid uniform, garter belts, black lace thigh high stockings, long lace gloves, embarrassed, shy expression, fashion model pose, fashion photography, elegant, cinematic",
+      "negative_prompt": "blurry, low quality, distorted, bad anatomy, deformed, artifacts, ugly",
+      "steps": 40,
+      "guidance_scale": 7.0,
+      "sampler": "Euler a",
+      "scheduler": "SGM Uniform",
+      "seed": 476836733,
+      "width": 1536,
+      "height": 2688,
+      "loras": {
+        "D:\\AI\\imageStudio\\models\\loras\\characters\\Belfast_V1.safetensors": 1.0
+      },
+      "upscale_method": "Lanczos",
+      "upscale_factor": 2.0,
+      "project": "None",
+      "character": "Belfast"
+    },
+    "character_detected": "Belfast",
+    "features": {
+      "character": [
+        "Belfast"
+      ],
+      "clothing": [
+        "maid headdress",
+        "garter belts",
+        "black lace thigh high stockings",
+        "long lace gloves"
+      ],
+      "appearance": [
+        "white long hair",
+        "blue eyes"
+      ],
+      "pose": [],
+      "expression": [
+        "blue eyes",
+        "embarrassed"
+      ],
+      "materials": [
+        "chain choker",
+        "black lace thigh high stockings",
+        "long lace gloves"
+      ],
+      "environment": [],
+      "general_tags": [
+        "Azur Lane",
+        "maid uniform",
+        "shy expression",
+        "fashion model pose",
+        "fashion photography",
+        "elegant",
+        "cinematic"
+      ]
+    }
+  },
+  "title_candidates": [
+    {
+      "ja": "ベルファスト、夜の装い",
+      "en": "Belfast, Night Attire"
+    },
+    {
+      "ja": "夜色に染まるベルファスト",
+      "en": "Belfast Shaded by the Night"
+    },
+    {
+      "ja": "ベルファストの優雅なひととき",
+      "en": "Belfast's Elegant Moment"
+    },
+    {
+      "ja": "月明かりとベルファスト",
+      "en": "Moonlight and Belfast"
+    },
+    {
+      "ja": "素肌を包むレースのベルファスト",
+      "en": "Lace Embracing Belfast's Skin"
+    }
+  ],
+  "selected_title": "ベルファスト、夜の装い",
+  "description": "アズールレーンより、ベルファストを描きました。\n繊細なレースとランジェリーの質感にこだわって仕上げています。\n気に入っていただけたら、ブックマークやいいねをいただけると励みになります！\n\n※AI生成による作品です。",
+  "generated_tags": [
+    "ベルファスト(アズールレーン)",
+    "アズールレーン",
+    "女の子",
+    "ロングヘア",
+    "青い瞳",
+    "メイドカチューシャ",
+    "メイド",
+    "レース",
+    "ストッキング",
+    "手袋"
+  ],
+  "final_edited_tags": [
+    "ベルファスト(アズールレーン)",
+    "アズールレーン",
+    "女の子",
+    "ロングヘア",
+    "青い瞳",
+    "メイドカチューシャ",
+    "メイド",
+    "レース",
+    "ストッキング",
+    "手袋"
+  ],
+  "is_ai": true,
+  "age_limit": "r18",
+  "posting_status": "success",
+  "pixiv_work_id": "406615016",
+  "saved_at": "2026-09-03 09:06:55"
+}

@@ -1,0 +1,52 @@
+[
+  {
+    "id": "white",
+    "name": "White",
+    "prompt": "white"
+  },
+  {
+    "id": "black",
+    "name": "Black",
+    "prompt": "black"
+  },
+  {
+    "id": "red",
+    "name": "Red",
+    "prompt": "red"
+  },
+  {
+    "id": "blue",
+    "name": "Blue",
+    "prompt": "blue"
+  },
+  {
+    "id": "navy",
+    "name": "Navy",
+    "prompt": "navy blue"
+  },
+  {
+    "id": "purple",
+    "name": "Purple",
+    "prompt": "purple"
+  },
+  {
+    "id": "pink",
+    "name": "Pink",
+    "prompt": "pink"
+  },
+  {
+    "id": "green",
+    "name": "Green",
+    "prompt": "emerald green"
+  },
+  {
+    "id": "burgundy",
+    "name": "Burgundy",
+    "prompt": "deep burgundy, wine red"
+  },
+  {
+    "id": "gold",
+    "name": "Gold",
+    "prompt": "golden trimmed, gold accented"
+  }
+]

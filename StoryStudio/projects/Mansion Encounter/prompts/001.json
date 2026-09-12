@@ -1,0 +1,14 @@
+{
+  "line_index": 0,
+  "line_text": "New story progression line...",
+  "character": "Belfast_HassakuXIllustrious_V1",
+  "directive": {},
+  "positive_prompt": "Belfast, long white hair cascading down her back, blue eyes wide with cautious curiosity, large breasts swaying slightly under an elegant black silk gown, hourglass figure poised with grace, entering a dimly lit gothic manor room, candlelight flickering on marble floors, heavy oak door closing behind her, antique furnishings, velvet curtains, rich atmosphere, cinematic lighting, detailed textures, realistic skin, ultra-detailed facial expression, high resolution, 8K, dramatic pose, elegant maid\u2019s posture",
+  "negative_prompt": "worst quality, low quality, bad anatomy, bad hands, missing fingers, extra fingers, fused fingers, distorted limbs, mutated hands, blurry, watermark, signature, text, cropped, out of frame, deformed, duplicate, morbid, bad proportions, disfigured",
+  "resolution": "1024x1536",
+  "steps": 40,
+  "cfg": 7,
+  "sampler": "DPM++ 2M",
+  "scheduler": "Karras",
+  "seed": 1424928616
+}

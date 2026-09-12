@@ -1,0 +1,47 @@
+[
+  {
+    "id": "none",
+    "name": "Default / Unspecified",
+    "prompt": ""
+  },
+  {
+    "id": "ankles_bound_together",
+    "name": "Ankles Bound Together",
+    "prompt": "ankles tightly bound together with rope, restricted legs, unable to take steps"
+  },
+  {
+    "id": "spreader_bar_wide",
+    "name": "Spreader Bar (Rigid Wide Spread)",
+    "prompt": "solid steel spreader bar between ankles, legs forced apart wide, locked leather ankle cuffs"
+  },
+  {
+    "id": "kneeling_thigh_tie",
+    "name": "Kneeling Floor Restraint",
+    "prompt": "kneeling on floor, thighs tied firmly to calves with rope, sitting on heels, floor restraint"
+  },
+  {
+    "id": "frogtie_knees_spread",
+    "name": "Frogtie (Knees Folded & Spread)",
+    "prompt": "frogtie leg binding, knees bent and pulled back towards hips, ankles tied to inner thighs"
+  },
+  {
+    "id": "one_leg_suspended",
+    "name": "Single Leg Suspended High",
+    "prompt": "one leg lifted and suspended overhead by rope, asymmetric suspension, standing on single tiptoe"
+  },
+  {
+    "id": "ankles_to_thighs",
+    "name": "Ankles Strapped to Thighs",
+    "prompt": "legs bent back tightly, ankles strapped directly to upper thighs with leather cuffs"
+  },
+  {
+    "id": "lotus_cross_legged",
+    "name": "Cross-Legged Lotus Restraint",
+    "prompt": "legs locked in full lotus cross-legged position, tight decorative ropes encircling knees and ankles"
+  },
+  {
+    "id": "floor_ring_shackles",
+    "name": "Ankles Shackled to Floor Rings",
+    "prompt": "ankles shackled to iron rings embedded in stone floor, short heavy iron chain links"
+  }
+]

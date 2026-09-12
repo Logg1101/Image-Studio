@@ -1,0 +1,62 @@
+[
+  {
+    "id": "none",
+    "name": "Natural Balanced Lighting",
+    "prompt_context": "natural balanced lighting, soft ambient light, finely detailed fabric texture"
+  },
+  {
+    "id": "volumetric_golden_hour",
+    "name": "Golden Hour & Silken Shimmer",
+    "prompt_context": "cinematic golden hour, volumetric warm sunbeams, dramatic golden rim light, ultra-detailed silken fabric sheen, lustrous cloth reflections, soft shadow roll-off"
+  },
+  {
+    "id": "chiaroscuro_velvet",
+    "name": "Moody Chiaroscuro & Crushed Velvet",
+    "prompt_context": "dramatic chiaroscuro lighting, deep rich shadow contrasts, single directional key light, crushed velvet fabric texture, micro-fiber subsurface scattering, luxurious tactile material"
+  },
+  {
+    "id": "studio_softbox_sheer_lace",
+    "name": "Diffused Studio Softbox & Sheer Lace",
+    "prompt_context": "high-end fashion studio softbox lighting, ultra-soft diffused fill, translucent sheer lace texture, intricate embroidery micro-weave, delicate transparent fabric threading"
+  },
+  {
+    "id": "cyberpunk_neon_glossy_latex",
+    "name": "Cyberpunk Neon & Glossy Latex",
+    "prompt_context": "dual neon cyberpunk lighting, cyan and magenta specular rim lights, glossy wet-look latex fabric reflections, high contrast specular highlights, sleek modern material sheen"
+  },
+  {
+    "id": "candlelight_fire_satin",
+    "name": "Warm Candlelight & Glossy Satin",
+    "prompt_context": "flickering intimate candlelight, warm ambient fireplace glow, golden specular highlights, smooth glossy satin fabric draped with liquid reflections, rich cozy shadows"
+  },
+  {
+    "id": "noir_backlit_leather",
+    "name": "Dramatic Noir Backlight & Leather Grain",
+    "prompt_context": "noir silhouette backlighting, sharp edge rim light, deep atmospheric shadows, textured grain leather fabric, matte tactile surface, gritty cinematic ambiance"
+  },
+  {
+    "id": "sunlit_window_organza",
+    "name": "Sunlit Window & Translucent Organza",
+    "prompt_context": "bright morning window sunlight, raytraced caustic light patterns, airy translucent organza fabric, fluttering sheer cloth, soft overexposure blooming"
+  },
+  {
+    "id": "rainy_bokeh_wet_fabric",
+    "name": "Rainy Night Bokeh & Wet Clinging Cloth",
+    "prompt_context": "rain-streaked window background, moody streetlamp bokeh, cool tone night lighting, damp wet fabric clinging realistically, glistening water droplets on cloth"
+  },
+  {
+    "id": "prismatic_crystal_sequins",
+    "name": "Prismatic Caustics & Glimmering Sequins",
+    "prompt_context": "prismatic crystal light refractions, rainbow specular caustics, shimmering sequin fabric, glittering metallic threading, dazzling particle glow"
+  },
+  {
+    "id": "dramatic_rembrandt_wool",
+    "name": "Rembrandt Portrait & Ribbed Knit Texture",
+    "prompt_context": "classic Rembrandt portrait triangle lighting, rich organic shadow depth, heavy ribbed knit wool fabric texture, hyper-detailed micro-threading, tactile cozy weave"
+  },
+  {
+    "id": "moonlit_mist_sheer_silk",
+    "name": "Ethereal Moonlight & Flowing Silk",
+    "prompt_context": "cool silver moonlight, ethereal mist luminescence, soft ambient cool glow, floating sheer silk fabric, pearlescent fabric highlight roll-off"
+  }
+]

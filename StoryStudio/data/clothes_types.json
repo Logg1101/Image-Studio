@@ -1,0 +1,152 @@
+[
+  {
+    "id": "maid",
+    "name": "Maid Outfit",
+    "prompt": "maid outfit, maid apron, frilled maid headdress, maid dress, white apron"
+  },
+  {
+    "id": "school_uniform",
+    "name": "School Uniform",
+    "prompt": "school uniform, sailor collar, pleated skirt, necktie, school blazer"
+  },
+  {
+    "id": "casual_dress",
+    "name": "Casual Dress",
+    "prompt": "casual sundress, sleeveless dress, elegant summer attire, simple dress"
+  },
+  {
+    "id": "evening_dress",
+    "name": "Evening Dress",
+    "prompt": "formal evening gown, long elegant dress, luxury velvet dress, backless dress"
+  },
+  {
+    "id": "summer_dress",
+    "name": "Summer Dress",
+    "prompt": "light summer dress, floral sundress, breezy fabric, thin straps"
+  },
+  {
+    "id": "traditional_kimono",
+    "name": "Traditional Kimono",
+    "prompt": "traditional japanese kimono, wide sash, obi, elegant patterned silk, furisode"
+  },
+  {
+    "id": "gothic_lolita",
+    "name": "Gothic Lolita",
+    "prompt": "gothic lolita dress, dark lace dress, Victorian corset, layered frills, gothic bonnet"
+  },
+  {
+    "id": "fantasy_adventurer",
+    "name": "Fantasy Adventurer",
+    "prompt": "fantasy adventurer attire, ornate tunic, leather accents, fantasy capelet, belt pouches"
+  },
+  {
+    "id": "office_lady",
+    "name": "Office Lady Suit",
+    "prompt": "business suit, pencil skirt, buttoned collared shirt, office lady attire, necktie"
+  },
+  {
+    "id": "lingerie_babydoll",
+    "name": "Lingerie / Babydoll",
+    "prompt": "sensual lace lingerie, satin bra and panties, delicate sheer sleepwear, babydoll"
+  },
+  {
+    "id": "bunny_girl",
+    "name": "Bunny Girl Suit",
+    "prompt": "bunny suit, glossy leotard, bunny ears, bow tie, collar, cuffs, fishnets"
+  },
+  {
+    "id": "nurse_uniform",
+    "name": "Nurse Uniform",
+    "prompt": "nurse uniform, nurse cap, fitted white dress, stethoscope, red cross motif"
+  },
+  {
+    "id": "cheongsam_qipao",
+    "name": "Cheongsam / Qipao",
+    "prompt": "chinese qipao, cheongsam dress, high side slit, mandarin collar, gold embroidery"
+  },
+  {
+    "id": "police_officer",
+    "name": "Police Officer",
+    "prompt": "police uniform, peaked cap, badge, buttoned shirt, pleated skirt, handcuffs on belt"
+  },
+  {
+    "id": "nun_habit",
+    "name": "Nun Habit",
+    "prompt": "nun habit, religious veil, long black robe, white wimple, rosary, cross necklace"
+  },
+  {
+    "id": "wedding_dress",
+    "name": "Bridal / Wedding Dress",
+    "prompt": "white bridal wedding dress, bridal veil, train, intricate lace bodice, bouquet"
+  },
+  {
+    "id": "swimsuit_bikini",
+    "name": "Swimsuit / Bikini",
+    "prompt": "stylish two-piece bikini, halterneck bikini top, side-tie bikini bottoms, beachwear"
+  },
+  {
+    "id": "gym_bloomers",
+    "name": "Gym Uniform / Bloomers",
+    "prompt": "gym uniform, gym shirt, athletic bloomers, white socks, sports attire"
+  },
+  {
+    "id": "silk_pajamas",
+    "name": "Silk Pajamas / Nightgown",
+    "prompt": "silk pajamas, buttoned sleep shirt, loose pajama shorts, cozy morning wear"
+  },
+  {
+    "id": "cyberpunk_techwear",
+    "name": "Cyberpunk Techwear",
+    "prompt": "cyberpunk techwear outfit, tactical straps, cropped jacket, glowing neon accents, utility belt"
+  },
+  {
+    "id": "royal_princess",
+    "name": "Princess / Royal Gown",
+    "prompt": "ornate princess gown, ballgown, golden brocade, royal jewels, puff sleeves, tiara"
+  },
+  {
+    "id": "witch_mage",
+    "name": "Witch / Mage Robes",
+    "prompt": "witch robes, pointed witch hat, spellcaster tunic, gold trim, mystical accessories"
+  },
+  {
+    "id": "yukata",
+    "name": "Summer Yukata",
+    "prompt": "casual cotton yukata, floral pattern, colorful obi sash, wooden geta, festival attire"
+  },
+  {
+    "id": "sweater_skirt",
+    "name": "Sweater & Pleated Skirt",
+    "prompt": "oversized knit sweater, pleated mini skirt, cozy autumn outfit, off-shoulder sweater"
+  },
+  {
+    "id": "tracksuit_sportswear",
+    "name": "Tracksuit / Sportswear",
+    "prompt": "athletic tracksuit, zip-up jacket, track pants, sports bra, sporty athletic wear"
+  },
+  {
+    "id": "steampunk_corset",
+    "name": "Steampunk Corset",
+    "prompt": "steampunk outfit, brown leather underbust corset, brass gears, ruffled blouse, high-low skirt"
+  },
+  {
+    "id": "ballerina_tutu",
+    "name": "Ballerina Tutu",
+    "prompt": "ballerina costume, layered tulle tutu, ballet leotard, ribbon ballet slippers, elegant bodice"
+  },
+  {
+    "id": "valkyrie_armor",
+    "name": "Valkyrie Combat Armor",
+    "prompt": "valkyrie battle armor, polished silver breastplate, winged pauldrons, battle skirt, gauntlets"
+  },
+  {
+    "id": "leather_catsuit",
+    "name": "Leather Bodysuit / Catsuit",
+    "prompt": "tight black leather bodysuit, glossy catsuit, zipper front, form-fitting latex, thigh boots"
+  },
+  {
+    "id": "micro_sling_bikini",
+    "name": "Micro Sling Bikini",
+    "prompt": "micro bikini, string sling bikini, revealing swimwear, minimal fabric, side ties"
+  }
+]

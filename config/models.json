@@ -1,0 +1,34 @@
+{
+    "models": [
+        {
+            "id": "flux_schnell_q4",
+            "architecture": "flux",
+            "variant": "schnell",
+            "format": "gguf",
+            "transformer_path": "models/checkpoints/flux/flux1-schnell-q4.gguf",
+            "text_encoder_paths": {},
+            "vae_path": null,
+            "config_path": "models/checkpoints/flux/flux-schnell-config"
+        },
+        {
+            "id": "flux_schnell_fp8",
+            "architecture": "flux",
+            "variant": "schnell",
+            "format": "safetensors",
+            "transformer_path": "models/checkpoints/flux/flux1-schnell-fp8.safetensors",
+            "text_encoder_paths": {},
+            "vae_path": null,
+            "config_path": "models/checkpoints/flux/flux-schnell-config"
+        },
+        {
+            "id": "animepro_flux_q5",
+            "architecture": "flux",
+            "variant": "schnell",
+            "format": "gguf",
+            "transformer_path": "models/checkpoints/flux/animepro-Q5_K_M.gguf",
+            "text_encoder_paths": {},
+            "vae_path": null,
+            "config_path": "models/checkpoints/flux/flux-schnell-config"
+        }
+    ]
+}
