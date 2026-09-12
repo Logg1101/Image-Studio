@@ -258,6 +258,14 @@ for /f "tokens=5" %a in ('netstat -aon ^| findstr :1420') do taskkill /f /pid %a
 
 ---
 
+## 🤝 Authorship & AI Disclosure
+
+This project was conceived, architected, and directed by **Ankit Kumar Sinha** ([@Logg1101](https://github.com/Logg1101)), who designed the product vision, creative studio workflows, pipeline orchestration, UI experience, and feature specifications.
+
+In the spirit of open transparency: the underlying code implementation, frontend components, and backend service integrations were developed in collaborative partnership with AI coding assistants. Human vision, workflow design, and iterative testing directed the construction of the entire suite.
+
+---
+
 ## 📜 License
 
 This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
