@@ -56,11 +56,11 @@ class RetouchService implements IRetouchService {
    * Fix Artifacts & Glitches:
    * Generates anatomically correct details (hands, legs, features) via prompt-guided AI inpainting.
    */
-  async fixArtifacts(imageSrc: string, maskSrc: string, prompt?: string): Promise<RetouchResponse> {
+  async fixArtifacts(imageSrc: string, maskSrc: string, prompt?: string, modelId?: string): Promise<RetouchResponse> {
     const res = await fetch(`${BACKEND_URL}/api/retouch/fix`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ image: imageSrc, mask: maskSrc, prompt }),
+      body: JSON.stringify({ image: imageSrc, mask: maskSrc, prompt, modelId }),
     });
     const data = await res.json();
     if (!res.ok || !data.success) {

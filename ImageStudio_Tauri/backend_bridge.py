@@ -144,7 +144,7 @@ async def api_fix_artifacts(request: Request):
 
             # Try generative SDXL inpainting first for realistic anatomy/object reconstruction
             try:
-                model_info = resolve_model_info(None)
+                model_info = resolve_model_info(data.get("model") or data.get("modelId"), preferred_arch="sdxl")
                 req_w = (pil_img.width // 8) * 8
                 req_h = (pil_img.height // 8) * 8
                 if pil_img.size != (req_w, req_h):
@@ -238,28 +238,52 @@ def get_nvml_status() -> Optional[Dict[str, Any]]:
         return None
 
 
-def resolve_model_info(model_key: Optional[str]) -> ModelInfo:
+def resolve_model_info(model_key: Optional[str], preferred_arch: Optional[str] = None) -> ModelInfo:
     """Robust resolution of ModelInfo from any ID, stem, or filename."""
     if not model_key:
+        # 1. Reuse already-loaded model in VRAM if it matches preferred arch (or none specified)
+        if coordinator.active_engine and getattr(coordinator.active_engine, "current_model_info", None):
+            cur = coordinator.active_engine.current_model_info
+            if not preferred_arch or cur.architecture == preferred_arch:
+                return cur
+        # 2. Filter by preferred architecture (e.g. "sdxl" for inpaint/retouch)
+        if preferred_arch:
+            for m in model_manager.available_models.values():
+                if m.architecture == preferred_arch:
+                    return m
+        # 3. Default to first available
         if model_manager.available_models:
             return next(iter(model_manager.available_models.values()))
         raise ValueError("No checkpoints found in models directory.")
 
     # 1. Exact dictionary key match
     if model_key in model_manager.available_models:
-        return model_manager.available_models[model_key]
+        candidate = model_manager.available_models[model_key]
+        if not preferred_arch or candidate.architecture == preferred_arch:
+            return candidate
 
     # 2. Match by stem (e.g. stripping .safetensors / .gguf)
     stem = Path(model_key).stem
     if stem in model_manager.available_models:
-        return model_manager.available_models[stem]
+        candidate = model_manager.available_models[stem]
+        if not preferred_arch or candidate.architecture == preferred_arch:
+            return candidate
 
     # 3. Case-insensitive or filename match
     for k, m in model_manager.available_models.items():
-        if k.lower() == model_key.lower() or k.lower() == stem.lower():
-            return m
-        if m.transformer_path and Path(m.transformer_path).name.lower() == model_key.lower():
-            return m
+        if k.lower() == model_key.lower() or k.lower() == stem.lower() or (m.transformer_path and Path(m.transformer_path).name.lower() == model_key.lower()):
+            if not preferred_arch or m.architecture == preferred_arch:
+                return m
+
+    # 4. If preferred arch requested and user requested non-matching or missing, fallback to preferred arch
+    if preferred_arch:
+        if coordinator.active_engine and getattr(coordinator.active_engine, "current_model_info", None):
+            cur = coordinator.active_engine.current_model_info
+            if cur.architecture == preferred_arch:
+                return cur
+        for m in model_manager.available_models.values():
+            if m.architecture == preferred_arch:
+                return m
 
     raise ValueError(f"Requested checkpoint '{model_key}' is not available in registered models.")
 

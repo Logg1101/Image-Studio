@@ -14,8 +14,10 @@ import {
   Wand2,
 } from "lucide-react";
 import { retouchService } from "../services/retouchService";
+import { useGeneration } from "../state/generationContext";
 
 export const RetouchStudio: React.FC = () => {
+  const { selectedModelId } = useGeneration();
   const [baseImageSrc, setBaseImageSrc] = useState<string | null>(null);
   const [imageDims, setImageDims] = useState<{ width: number; height: number }>({ width: 0, height: 0 });
   const [brushSize, setBrushSize] = useState<number>(32);
@@ -233,7 +235,7 @@ export const RetouchStudio: React.FC = () => {
     setStatusMessage("Redrawing selection with anatomically correct details via AI inpaint...");
 
     try {
-      const data = await retouchService.fixArtifacts(baseImageSrc, maskBase64, fixPrompt.trim());
+      const data = await retouchService.fixArtifacts(baseImageSrc, maskBase64, fixPrompt.trim(), selectedModelId);
       handleImageLoad(data.image);
       setHistory((prev) => [...prev, data.image]);
       setStatusMessage("Anatomy & artifacts repaired with AI details!");
