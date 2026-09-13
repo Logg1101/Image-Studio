@@ -15,6 +15,7 @@ import {
   ZoomIn,
   ZoomOut,
   RotateCcw,
+  Hand,
 } from "lucide-react";
 import { retouchService } from "../services/retouchService";
 import { useGeneration } from "../state/generationContext";
@@ -24,7 +25,7 @@ export const RetouchStudio: React.FC = () => {
   const [baseImageSrc, setBaseImageSrc] = useState<string | null>(null);
   const [imageDims, setImageDims] = useState<{ width: number; height: number }>({ width: 0, height: 0 });
   const [brushSize, setBrushSize] = useState<number>(32);
-  const [tool, setTool] = useState<"brush" | "eraser">("brush");
+  const [tool, setTool] = useState<"brush" | "eraser" | "pan">("brush");
   const [isProcessing, setIsProcessing] = useState<boolean>(false);
   const [statusMessage, setStatusMessage] = useState<string | null>(null);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
@@ -34,6 +35,8 @@ export const RetouchStudio: React.FC = () => {
   // Zoom & Pan state
   const [zoom, setZoom] = useState<number>(1);
   const [pan, setPan] = useState<{ x: number; y: number }>({ x: 0, y: 0 });
+  const [isPanning, setIsPanning] = useState<boolean>(false);
+  const [isSpacePressed, setIsSpacePressed] = useState<boolean>(false);
   const isPanningRef = useRef<boolean>(false);
   const startPanRef = useRef<{ x: number; y: number }>({ x: 0, y: 0 });
 
@@ -122,12 +125,12 @@ export const RetouchStudio: React.FC = () => {
     ctx.lineCap = "round";
     ctx.lineJoin = "round";
 
-    if (tool === "brush") {
-      ctx.globalCompositeOperation = "source-over";
-      ctx.strokeStyle = "rgba(239, 68, 68, 0.65)"; // Semi-transparent red overlay
-    } else {
+    if (tool === "eraser") {
       ctx.globalCompositeOperation = "destination-out";
       ctx.strokeStyle = "rgba(0, 0, 0, 1)";
+    } else {
+      ctx.globalCompositeOperation = "source-over";
+      ctx.strokeStyle = "rgba(239, 68, 68, 0.65)"; // Semi-transparent red overlay
     }
 
     ctx.beginPath();
@@ -135,6 +138,27 @@ export const RetouchStudio: React.FC = () => {
     ctx.lineTo(to.x, to.y);
     ctx.stroke();
   };
+
+  // Spacebar quick-pan navigation (Photoshop/Figma style)
+  useEffect(() => {
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.code === "Space" && !(e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement)) {
+        e.preventDefault();
+        setIsSpacePressed(true);
+      }
+    };
+    const onKeyUp = (e: KeyboardEvent) => {
+      if (e.code === "Space") {
+        setIsSpacePressed(false);
+      }
+    };
+    window.addEventListener("keydown", onKeyDown);
+    window.addEventListener("keyup", onKeyUp);
+    return () => {
+      window.removeEventListener("keydown", onKeyDown);
+      window.removeEventListener("keyup", onKeyUp);
+    };
+  }, []);
 
   const handleWheel = (e: React.WheelEvent) => {
     if (!baseImageSrc) return;
@@ -144,18 +168,21 @@ export const RetouchStudio: React.FC = () => {
   };
 
   const handlePointerDown = (e: React.PointerEvent<HTMLCanvasElement>) => {
-    try {
-      e.currentTarget.setPointerCapture(e.pointerId);
-    } catch {}
-
-    // Right-click (2), middle-click (1), or Alt+click -> Pan image
-    if (e.button === 1 || e.button === 2 || e.altKey) {
+    // Left click with Pan tool or Spacebar held, middle-click, right-click, or Alt+click -> Pan
+    if (tool === "pan" || isSpacePressed || e.button === 1 || e.button === 2 || e.altKey) {
+      try {
+        e.currentTarget.setPointerCapture(e.pointerId);
+      } catch {}
       isPanningRef.current = true;
+      setIsPanning(true);
       startPanRef.current = { x: e.clientX - pan.x, y: e.clientY - pan.y };
       return;
     }
 
     if (e.button === 0) {
+      try {
+        e.currentTarget.setPointerCapture(e.pointerId);
+      } catch {}
       const coords = getCanvasCoords(e);
       if (!coords) return;
       isDrawingRef.current = true;
@@ -183,10 +210,41 @@ export const RetouchStudio: React.FC = () => {
   const handlePointerUp = (e: React.PointerEvent<HTMLCanvasElement>) => {
     if (isPanningRef.current) {
       isPanningRef.current = false;
+      setIsPanning(false);
     }
     if (isDrawingRef.current) {
       isDrawingRef.current = false;
       lastPosRef.current = null;
+    }
+    try {
+      e.currentTarget.releasePointerCapture(e.pointerId);
+    } catch {}
+  };
+
+  // Drag-and-move pan on the outer backdrop / view container
+  const handleBackdropPointerDown = (e: React.PointerEvent<HTMLDivElement>) => {
+    if (e.target !== e.currentTarget) return;
+    try {
+      e.currentTarget.setPointerCapture(e.pointerId);
+    } catch {}
+    isPanningRef.current = true;
+    setIsPanning(true);
+    startPanRef.current = { x: e.clientX - pan.x, y: e.clientY - pan.y };
+  };
+
+  const handleBackdropPointerMove = (e: React.PointerEvent<HTMLDivElement>) => {
+    if (isPanningRef.current) {
+      setPan({
+        x: e.clientX - startPanRef.current.x,
+        y: e.clientY - startPanRef.current.y,
+      });
+    }
+  };
+
+  const handleBackdropPointerUp = (e: React.PointerEvent<HTMLDivElement>) => {
+    if (isPanningRef.current) {
+      isPanningRef.current = false;
+      setIsPanning(false);
     }
     try {
       e.currentTarget.releasePointerCapture(e.pointerId);
@@ -361,30 +419,43 @@ export const RetouchStudio: React.FC = () => {
             <div className="text-xs font-bold uppercase tracking-wider text-[#8B949E]">
               Brush Tools
             </div>
-            <div className="flex space-x-2">
+            <div className="flex space-x-1.5">
               <button
                 type="button"
                 onClick={() => setTool("brush")}
-                className={`flex-1 py-1.5 px-3 rounded-lg flex items-center justify-center space-x-2 text-xs font-semibold border transition ${
+                className={`flex-1 py-1.5 px-2 rounded-lg flex items-center justify-center space-x-1.5 text-xs font-semibold border transition ${
                   tool === "brush"
                     ? "bg-emerald-600 border-emerald-400 text-white"
                     : "bg-[#0D1117] border-[#30363D] text-[#8B949E] hover:text-white"
                 }`}
               >
                 <Paintbrush className="w-3.5 h-3.5" />
-                <span>Mask Brush</span>
+                <span>Brush</span>
               </button>
               <button
                 type="button"
                 onClick={() => setTool("eraser")}
-                className={`flex-1 py-1.5 px-3 rounded-lg flex items-center justify-center space-x-2 text-xs font-semibold border transition ${
+                className={`flex-1 py-1.5 px-2 rounded-lg flex items-center justify-center space-x-1.5 text-xs font-semibold border transition ${
                   tool === "eraser"
                     ? "bg-rose-600 border-rose-400 text-white"
                     : "bg-[#0D1117] border-[#30363D] text-[#8B949E] hover:text-white"
                 }`}
               >
                 <Eraser className="w-3.5 h-3.5" />
-                <span>Mask Eraser</span>
+                <span>Eraser</span>
+              </button>
+              <button
+                type="button"
+                onClick={() => setTool("pan")}
+                className={`flex-1 py-1.5 px-2 rounded-lg flex items-center justify-center space-x-1.5 text-xs font-semibold border transition ${
+                  tool === "pan"
+                    ? "bg-blue-600 border-blue-400 text-white"
+                    : "bg-[#0D1117] border-[#30363D] text-[#8B949E] hover:text-white"
+                }`}
+                title="Move / Pan image (or hold Space to drag)"
+              >
+                <Hand className="w-3.5 h-3.5" />
+                <span>Move</span>
               </button>
             </div>
 
@@ -523,8 +594,14 @@ export const RetouchStudio: React.FC = () => {
 
         {/* Right Canvas Display */}
         <div
-          className="flex-1 flex items-center justify-center p-6 bg-[#07090E] relative overflow-hidden select-none"
+          className={`flex-1 flex items-center justify-center p-6 bg-[#07090E] relative overflow-hidden select-none ${
+            isPanning ? "cursor-grabbing" : tool === "pan" || isSpacePressed ? "cursor-grab" : ""
+          }`}
           onWheel={handleWheel}
+          onPointerDown={handleBackdropPointerDown}
+          onPointerMove={handleBackdropPointerMove}
+          onPointerUp={handleBackdropPointerUp}
+          onPointerCancel={handleBackdropPointerUp}
         >
           {!baseImageSrc ? (
             <div className="text-center p-8 border border-dashed border-[#21262D] rounded-2xl max-w-sm">
@@ -550,7 +627,7 @@ export const RetouchStudio: React.FC = () => {
                 aspectRatio: `${imageDims.width} / ${imageDims.height}`,
                 transform: `translate(${pan.x}px, ${pan.y}px) scale(${zoom})`,
                 transformOrigin: "center center",
-                transition: isPanningRef.current ? "none" : "transform 0.08s ease-out",
+                transition: isPanning ? "none" : "transform 0.08s ease-out",
                 backgroundImage: `
                   linear-gradient(45deg, #1c2128 25%, transparent 25%),
                   linear-gradient(-45deg, #1c2128 25%, transparent 25%),
@@ -573,7 +650,15 @@ export const RetouchStudio: React.FC = () => {
                 onPointerUp={handlePointerUp}
                 onPointerCancel={handlePointerUp}
                 onContextMenu={(e) => e.preventDefault()}
-                className="absolute inset-0 w-full h-full block touch-none cursor-crosshair"
+                className={`absolute inset-0 w-full h-full block touch-none ${
+                  isPanning
+                    ? "cursor-grabbing"
+                    : tool === "pan" || isSpacePressed
+                    ? "cursor-grab"
+                    : tool === "eraser"
+                    ? "cursor-cell"
+                    : "cursor-crosshair"
+                }`}
               />
             </div>
           )}
