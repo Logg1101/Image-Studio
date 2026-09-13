@@ -12,6 +12,9 @@ import {
   Undo2,
   Sparkles,
   Wand2,
+  ZoomIn,
+  ZoomOut,
+  RotateCcw,
 } from "lucide-react";
 import { retouchService } from "../services/retouchService";
 import { useGeneration } from "../state/generationContext";
@@ -27,6 +30,12 @@ export const RetouchStudio: React.FC = () => {
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [history, setHistory] = useState<string[]>([]);
   const [fixPrompt, setFixPrompt] = useState<string>("perfect hands, detailed fingers, correct limbs");
+
+  // Zoom & Pan state
+  const [zoom, setZoom] = useState<number>(1);
+  const [pan, setPan] = useState<{ x: number; y: number }>({ x: 0, y: 0 });
+  const isPanningRef = useRef<boolean>(false);
+  const startPanRef = useRef<{ x: number; y: number }>({ x: 0, y: 0 });
 
   const imageCanvasRef = useRef<HTMLCanvasElement | null>(null);
   const maskCanvasRef = useRef<HTMLCanvasElement | null>(null);
@@ -65,6 +74,8 @@ export const RetouchStudio: React.FC = () => {
       setErrorMessage(null);
       setImageDims({ width: img.naturalWidth || img.width, height: img.naturalHeight || img.height });
       setBaseImageSrc(dataUrl);
+      setZoom(1);
+      setPan({ x: 0, y: 0 });
       clearMask();
     };
     img.src = dataUrl;
@@ -125,18 +136,43 @@ export const RetouchStudio: React.FC = () => {
     ctx.stroke();
   };
 
+  const handleWheel = (e: React.WheelEvent) => {
+    if (!baseImageSrc) return;
+    e.preventDefault();
+    const factor = e.deltaY < 0 ? 1.15 : 0.85;
+    setZoom((prev) => Math.min(4, Math.max(0.25, Math.round(prev * factor * 100) / 100)));
+  };
+
   const handlePointerDown = (e: React.PointerEvent<HTMLCanvasElement>) => {
     try {
       e.currentTarget.setPointerCapture(e.pointerId);
     } catch {}
-    const coords = getCanvasCoords(e);
-    if (!coords) return;
-    isDrawingRef.current = true;
-    lastPosRef.current = { x: coords.x, y: coords.y };
-    drawStroke(coords, coords, coords.scaleX);
+
+    // Right-click (2), middle-click (1), or Alt+click -> Pan image
+    if (e.button === 1 || e.button === 2 || e.altKey) {
+      isPanningRef.current = true;
+      startPanRef.current = { x: e.clientX - pan.x, y: e.clientY - pan.y };
+      return;
+    }
+
+    if (e.button === 0) {
+      const coords = getCanvasCoords(e);
+      if (!coords) return;
+      isDrawingRef.current = true;
+      lastPosRef.current = { x: coords.x, y: coords.y };
+      drawStroke(coords, coords, coords.scaleX);
+    }
   };
 
   const handlePointerMove = (e: React.PointerEvent<HTMLCanvasElement>) => {
+    if (isPanningRef.current) {
+      setPan({
+        x: e.clientX - startPanRef.current.x,
+        y: e.clientY - startPanRef.current.y,
+      });
+      return;
+    }
+
     if (!isDrawingRef.current || !lastPosRef.current) return;
     const coords = getCanvasCoords(e);
     if (!coords) return;
@@ -145,13 +181,16 @@ export const RetouchStudio: React.FC = () => {
   };
 
   const handlePointerUp = (e: React.PointerEvent<HTMLCanvasElement>) => {
+    if (isPanningRef.current) {
+      isPanningRef.current = false;
+    }
     if (isDrawingRef.current) {
       isDrawingRef.current = false;
       lastPosRef.current = null;
-      try {
-        e.currentTarget.releasePointerCapture(e.pointerId);
-      } catch {}
     }
+    try {
+      e.currentTarget.releasePointerCapture(e.pointerId);
+    } catch {}
   };
 
   const clearMask = () => {
@@ -483,7 +522,10 @@ export const RetouchStudio: React.FC = () => {
         </div>
 
         {/* Right Canvas Display */}
-        <div className="flex-1 flex items-center justify-center p-6 bg-[#07090E] relative overflow-hidden">
+        <div
+          className="flex-1 flex items-center justify-center p-6 bg-[#07090E] relative overflow-hidden select-none"
+          onWheel={handleWheel}
+        >
           {!baseImageSrc ? (
             <div className="text-center p-8 border border-dashed border-[#21262D] rounded-2xl max-w-sm">
               <Paintbrush className="w-10 h-10 text-[#30363D] mx-auto mb-3" />
@@ -506,6 +548,9 @@ export const RetouchStudio: React.FC = () => {
                 maxWidth: "100%",
                 maxHeight: "calc(100vh - 120px)",
                 aspectRatio: `${imageDims.width} / ${imageDims.height}`,
+                transform: `translate(${pan.x}px, ${pan.y}px) scale(${zoom})`,
+                transformOrigin: "center center",
+                transition: isPanningRef.current ? "none" : "transform 0.08s ease-out",
                 backgroundImage: `
                   linear-gradient(45deg, #1c2128 25%, transparent 25%),
                   linear-gradient(-45deg, #1c2128 25%, transparent 25%),
@@ -527,8 +572,48 @@ export const RetouchStudio: React.FC = () => {
                 onPointerMove={handlePointerMove}
                 onPointerUp={handlePointerUp}
                 onPointerCancel={handlePointerUp}
+                onContextMenu={(e) => e.preventDefault()}
                 className="absolute inset-0 w-full h-full block touch-none cursor-crosshair"
               />
+            </div>
+          )}
+
+          {/* Floating Zoom & Pan Controls */}
+          {baseImageSrc && (
+            <div className="absolute bottom-4 right-4 flex items-center space-x-1.5 bg-[#161B22]/90 backdrop-blur-md border border-[#30363D] px-2.5 py-1.5 rounded-xl shadow-2xl z-20">
+              <button
+                type="button"
+                onClick={() => setZoom((z) => Math.max(0.25, Math.round((z - 0.25) * 100) / 100))}
+                className="p-1.5 rounded-lg hover:bg-[#21262D] text-[#8B949E] hover:text-white transition cursor-pointer"
+                title="Zoom Out (-)"
+              >
+                <ZoomOut className="w-4 h-4" />
+              </button>
+              <button
+                type="button"
+                onClick={() => { setZoom(1); setPan({ x: 0, y: 0 }); }}
+                className="px-2 py-1 rounded-lg hover:bg-[#21262D] text-xs font-mono font-bold text-[#E8ECF4] transition cursor-pointer"
+                title="Reset Zoom & Pan (100%)"
+              >
+                {Math.round(zoom * 100)}%
+              </button>
+              <button
+                type="button"
+                onClick={() => setZoom((z) => Math.min(4, Math.round((z + 0.25) * 100) / 100))}
+                className="p-1.5 rounded-lg hover:bg-[#21262D] text-[#8B949E] hover:text-white transition cursor-pointer"
+                title="Zoom In (+)"
+              >
+                <ZoomIn className="w-4 h-4" />
+              </button>
+              <div className="w-[1px] h-4 bg-[#30363D] mx-0.5" />
+              <button
+                type="button"
+                onClick={() => { setZoom(1); setPan({ x: 0, y: 0 }); }}
+                className="p-1.5 rounded-lg hover:bg-[#21262D] text-[#8B949E] hover:text-white transition cursor-pointer"
+                title="Reset View"
+              >
+                <RotateCcw className="w-3.5 h-3.5" />
+              </button>
             </div>
           )}
         </div>
